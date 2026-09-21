@@ -12,6 +12,10 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true, //remueve los campos excedentes
       forbidNonWhitelisted: true, //marca error si hay campos excedentes
+      transform: true, //transformaDTO al tipo de dato recibido
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
 
